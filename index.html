@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Highlights by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Proud Panda</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation bar-->
+		<ul class="header">
+			<div class="logo">
+				<img src="assets/css/images/pandaicon.svg" alt = "proud panda logo"> 
+			</div>
+			<nav>
+				<ul class="navigationbar-links">
+					<li><a href="#one">Top Sellers</a></li>
+					<li><a href="#two">About Us</a></li>
+					<li><a href="#four">Make a Reservation</a></li>
+					<li><a href="#five">Reviews</a></li>
+					
+				</ul>
+			</nav>
+		</ul>
+
+		<!-- Header -->
+			<section id="header">
+				<header class="major">
+					<h1>Proud Panda</h1>
+					<p> Savour the Soul of Vietnam in Every Bite </p>
+				</header>
+				<div class="container">
+					<ul class="actions special">
+						<li><a href="#one" class="button primary scrolly">Begin your Journey</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>Top sellers</h2>
+						</header>
+						<p>At Proud Peacock we pride ourselves with all our dishes, but there are a select few that customers simply can't get enough of. Discover the heart of the menu</p>
+							<ul class="icons-grid">
+							<li>
+								<img src="assets/css/images/pho.jpg" alt="Pho" class="food-photo">
+								<h3>Pho</h3>
+							</li>
+							<li>
+								<img src="assets/css/images/bahnmi.jpg" alt="Banh Mi" class="food-photo">
+								<h3>Banh Mi</h3>
+							</li>
+							<li>
+								<img src="assets/css/images/springroll.jpg" alt="Spring Rolls" class="food-photo">
+								<h3>Spring Rolls</h3>
+							</li>
+							<li>
+								<img src="assets/css/images/vietnamesecoffee.jpg" alt="Vietnamese Coffee" class="food-photo">
+								<h3>Vietnamese Coffee</h3>
+							</li>
+							</ul>
+
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>About us</h2>
+						</header>
+						<p>Welcome to proud peacock where we aim to provide a unique Vietnamese culinary experience with our delectable selection of comforting pho and crunchy bahn mi We promise to deliver a memorable dining experience with Vietnamese warmth and flavours.</p>
+					</div>
+					<a href="#Three" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+			<section id="Three" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>Other common dishes and our restaurant</h2>
+						</header>
+							<ul class="icons-grid">
+							<li>
+								<img src="assets/css/images/hambahnmi.jpg" alt="hambahnmi">	
+								<h3>Ham Bahn Mi</h3>
+							</li>
+							<li>
+								<img src="assets/css/images/riceandcurry.jpg" alt="Rice and Curry">	
+								<h3>Rice and Curry</h3>
+							</li>
+							<li>
+								<img src="assets/css/images/vietnamesebowl.jpg" alt="Vietnamese Bowl">
+								<h3>Vietnamese Bowl</h3>
+							</li>
+							<li>
+								<img src="assets/css/images/miscellaneousfood.jpg" alt="miscellaneousfood">
+								<h3>Other dishes</h3>
+							</li>
+							</ul>
+
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+			<section id="four" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>Make a Reservation</h2>
+							<h3>Reservations can only be made on the same day</h3>
+						</header>
+						<form id="reservationForm">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+							<span id="nameError" style="color:red"></span><br><br>
+
+
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required>
+
+
+							<label for="time">Time:</label>
+							<input type="time" id="time" name="time" required>
+
+							<button type="submit">Reserve</button>
+						</form>
+                    </div>      
+					<div id="confirmation" style="margin-top:20px; color:green;"></div>
+					<a href="#five" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+			<script>
+				document.getElementById('reservationForm').addEventListener('submit', function(event) {
+					event.preventDefault();
+
+					const name = document.getElementById('name').value.trim();
+					const nameError = document.getElementById('nameError');
+					const confirmation = document.getElementById('confirmation');
+					nameError.textContent = '';
+					confirmation.textContent = '';
+
+					if (name.length < 3) {
+						nameError.textContent = "Name must be at least 3 characters.";
+					} else if (name.length > 30) {
+						nameError.textContent = "Name must be less than 30 characters.";
+					} else {
+						confirmation.textContent = 'All details were entered correctly. Your reservation was booked successfully.';
+						form.reset();
+					}
+					
+					});
+			</script>
+
+
+		<!-- Review section and footer -->
+			<section id="five" class="main-special">
+				<div class="container">	
+					<div class = "content">
+						<div class="review-section">
+							<header class="major">
+								<h2>What Our Customers Say</h2>
+							</header>
+								<div class="reviews">
+									<blockquote>"The best Vietnamese food I've ever had!"</blockquote>
+									<cite>— Jane D.</cite>
+								</div>
+								<div class="reviews">
+									<blockquote>"Amazing atmosphere and friendly staff."</blockquote>
+									<cite>— Michael S.</cite>
+								</div>
+						</div>	
+					</div>
+				</div>
+				<footer>
+					<div class="footer-section-container">
+						<div class="footer-col">
+							<h3 class="footer-title">Opening Hours</h3>
+							<ul class="opening-hours">
+								<li><strong>Monday–Friday:</strong> 10:00 AM – 10:00 PM</li>
+								<li><strong>Saturday-Sunday:</strong> 11:00 AM – 11:00 PM</li>
+							</ul>
+						</div>
+						<div class="footer-col">
+							<h3 class="footer-title">Location</h3>
+							<address>
+								28 Hamilton Place, Mount Waverley<br>
+								Melbourne, VIC 3000<br>
+								Australia
+							</address>
+						</div>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
+						<li><a href="https://icons8.com">icons8</a></li>
+					</ul>
+				</footer>
+			</section>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
